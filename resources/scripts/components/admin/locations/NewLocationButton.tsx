@@ -20,9 +20,9 @@ interface Values {
 
 const schema = object().shape({
     short: string()
-        .required('A location short name must be provided.')
-        .max(32, 'Location short name must not exceed 32 characters.'),
-    long: string().max(255, 'Location long name must not exceed 255 characters.'),
+        .required('Должен быть указан код локации.')
+        .max(32, 'Длина кода не должна превышать 32 символа.'),
+    long: string().max(255, 'Имя локации не должно превышать 255 символов.'),
 });
 
 export default () => {
@@ -60,15 +60,15 @@ export default () => {
                     >
                         <FlashMessageRender byKey={'location:create'} css={tw`mb-6`} />
 
-                        <h2 css={tw`mb-6 text-2xl text-neutral-100`}>New Location</h2>
+                        <h2 css={tw`mb-6 text-2xl text-neutral-100`}>Новая локация</h2>
 
                         <Form css={tw`m-0`}>
                             <Field
                                 type={'text'}
                                 id={'short'}
                                 name={'short'}
-                                label={'Short'}
-                                description={'A short name used to identify this location.'}
+                                label={'Код локации'}
+                                description={'Краткое название этой локации.'}
                                 autoFocus
                             />
 
@@ -77,8 +77,8 @@ export default () => {
                                     type={'text'}
                                     id={'long'}
                                     name={'long'}
-                                    label={'Long'}
-                                    description={'A long name for this location.'}
+                                    label={'Название'}
+                                    description={'Название этой локации.'}
                                 />
                             </div>
 
@@ -89,10 +89,10 @@ export default () => {
                                     css={tw`w-full sm:w-auto sm:mr-2`}
                                     onClick={() => setVisible(false)}
                                 >
-                                    Cancel
+                                    Отмена
                                 </Button.Text>
                                 <Button css={tw`w-full mt-4 sm:w-auto sm:mt-0`} type={'submit'}>
-                                    Create Location
+                                    Создать локацию
                                 </Button>
                             </div>
                         </Form>
@@ -106,7 +106,7 @@ export default () => {
                 css={tw`h-10 px-4 py-0 whitespace-nowrap`}
                 onClick={() => setVisible(true)}
             >
-                New Location
+                Новая локация
             </Button>
         </>
     );
