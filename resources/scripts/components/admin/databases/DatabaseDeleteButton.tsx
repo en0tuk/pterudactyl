@@ -44,14 +44,14 @@ export default ({ databaseId, onDeleted }: Props) => {
         <>
             <ConfirmationModal
                 visible={visible}
-                title={'Delete database host?'}
-                buttonText={'Yes, delete database host'}
+                title={'Удалить хост баз данных?'}
+                buttonText={'Да, удалить'}
                 onConfirmed={onDelete}
                 showSpinnerOverlay={loading}
                 onModalDismissed={() => setVisible(false)}
             >
-                Are you sure you want to delete this database host? This action will delete all knowledge of databases
-                created on this host but not the databases themselves.
+                Вы уверены, что хотите удалить этот хост баз данных? Это действие удалит всю информацию о базах данных,
+                созданных на этом хосте, но не сами базы данных.
             </ConfirmationModal>
 
             <Button.Danger type="button" shape={Shape.IconSquare} onClick={() => setVisible(true)}>

@@ -86,16 +86,16 @@ const DatabasesContainer = () => {
         <AdminContentBlock title={'Databases'}>
             <div css={tw`w-full flex flex-row items-center mb-8`}>
                 <div css={tw`flex flex-col flex-shrink`} style={{ minWidth: '0' }}>
-                    <h2 css={tw`text-2xl text-neutral-50 font-header font-medium`}>Database Hosts</h2>
+                    <h2 css={tw`text-2xl text-neutral-50 font-header font-medium`}>Хосты баз данных</h2>
                     <p css={tw`text-base text-neutral-400 whitespace-nowrap overflow-ellipsis overflow-hidden`}>
-                        Database hosts that servers can have databases created on.
+                        Хосты, на которых сервера могут создавать базы данных.
                     </p>
                 </div>
 
                 <div css={tw`flex ml-auto pl-4`}>
                     <NavLink to="/admin/databases/new">
                         <Button type="button" size={Size.Large} css={tw`h-10 px-4 py-0 whitespace-nowrap`}>
-                            New Database Host
+                            Новый хост
                         </Button>
                     </NavLink>
                 </div>
@@ -123,8 +123,8 @@ const DatabasesContainer = () => {
                                         direction={sort === 'name' ? (sortDirection ? 1 : 2) : null}
                                         onClick={() => setSort('name')}
                                     />
-                                    <TableHeader name={'Address'} />
-                                    <TableHeader name={'Username'} />
+                                    <TableHeader name={'Адрес'} />
+                                    <TableHeader name={'Имя пользователя'} />
                                 </TableHead>
 
                                 <TableBody>
