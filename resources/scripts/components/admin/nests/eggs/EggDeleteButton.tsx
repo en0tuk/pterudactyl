@@ -44,13 +44,13 @@ export default ({ eggId, onDeleted }: Props) => {
         <>
             <ConfirmationModal
                 visible={visible}
-                title={'Delete egg?'}
-                buttonText={'Yes, delete egg'}
+                title={'Удалить яйцо?'}
+                buttonText={'Да, удалить'}
                 onConfirmed={onDelete}
                 showSpinnerOverlay={loading}
                 onModalDismissed={() => setVisible(false)}
             >
-                Are you sure you want to delete this egg? You may only delete an egg with no servers using it.
+                Вы уверены, что хотите удалить это яйцо? Вы можете удалить только то яйцо, которое не используется серверами.
             </ConfirmationModal>
 
             <Button.Danger type="button" shape={Shape.IconSquare} onClick={() => setVisible(true)}>

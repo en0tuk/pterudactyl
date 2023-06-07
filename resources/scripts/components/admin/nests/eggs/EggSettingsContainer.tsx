@@ -26,12 +26,12 @@ export function EggInformationContainer() {
     const { isSubmitting } = useFormikContext();
 
     return (
-        <AdminBox icon={faEgg} title={'Egg Information'} css={tw`relative`}>
+        <AdminBox icon={faEgg} title={'Информация о яйце'} css={tw`relative`}>
             <SpinnerOverlay visible={isSubmitting} />
 
-            <Field id={'name'} name={'name'} label={'Name'} type={'text'} css={tw`mb-6`} />
+            <Field id={'name'} name={'name'} label={'Название'} type={'text'} css={tw`mb-6`} />
 
-            <Field id={'description'} name={'description'} label={'Description'} type={'text'} css={tw`mb-2`} />
+            <Field id={'description'} name={'description'} label={'Описание'} type={'text'} css={tw`mb-2`} />
         </AdminBox>
     );
 }
@@ -51,7 +51,7 @@ function EggDetailsContainer() {
             </div>
 
             <div css={tw`mb-2`}>
-                <Label>Author</Label>
+                <Label>Автор</Label>
                 <Input id={'author'} name={'author'} type={'text'} value={egg.author} readOnly />
             </div>
         </AdminBox>
@@ -62,10 +62,10 @@ export function EggStartupContainer({ className }: { className?: string }) {
     const { isSubmitting } = useFormikContext();
 
     return (
-        <AdminBox icon={faTerminal} title={'Startup Command'} css={tw`relative`} className={className}>
+        <AdminBox icon={faTerminal} title={'Команда запуска'} css={tw`relative`} className={className}>
             <SpinnerOverlay visible={isSubmitting} />
 
-            <Field id={'startup'} name={'startup'} label={'Startup Command'} type={'text'} css={tw`mb-1`} />
+            <Field id={'startup'} name={'startup'} label={'Команда запуска'} type={'text'} css={tw`mb-1`} />
         </AdminBox>
     );
 }
@@ -77,7 +77,7 @@ export function EggImageContainer() {
         <AdminBox icon={faDocker} title={'Docker'} css={tw`relative`}>
             <SpinnerOverlay visible={isSubmitting} />
 
-            <TextareaField id={'dockerImages'} name={'dockerImages'} label={'Docker Images'} rows={5} />
+            <TextareaField id={'dockerImages'} name={'dockerImages'} label={'Образ Docker'} rows={5} />
         </AdminBox>
     );
 }
@@ -86,10 +86,10 @@ export function EggLifecycleContainer() {
     const { isSubmitting } = useFormikContext();
 
     return (
-        <AdminBox icon={faFireAlt} title={'Lifecycle'} css={tw`relative`}>
+        <AdminBox icon={faFireAlt} title={'Жизненный цикл'} css={tw`relative`}>
             <SpinnerOverlay visible={isSubmitting} />
 
-            <Field id={'configStop'} name={'configStop'} label={'Stop Command'} type={'text'} css={tw`mb-1`} />
+            <Field id={'configStop'} name={'configStop'} label={'Команда остановки'} type={'text'} css={tw`mb-1`} />
         </AdminBox>
     );
 }
@@ -129,11 +129,11 @@ export const EggProcessContainer = forwardRef<any, EggProcessContainerProps>(fun
     }));
 
     return (
-        <AdminBox icon={faMicrochip} title={'Process Configuration'} css={tw`relative`} className={className}>
+        <AdminBox icon={faMicrochip} title={'Конфигурация'} css={tw`relative`} className={className}>
             <SpinnerOverlay visible={isSubmitting} />
 
             <div css={tw`mb-5`}>
-                <Label>Startup Configuration</Label>
+                <Label>Параметры запуска</Label>
                 <Editor
                     childClassName={tw`h-32 rounded`}
                     initialContent={values.configStartup}
@@ -145,7 +145,7 @@ export const EggProcessContainer = forwardRef<any, EggProcessContainerProps>(fun
             </div>
 
             <div css={tw`mb-1`}>
-                <Label>Configuration Files</Label>
+                <Label>Файлы конфигурации</Label>
                 <Editor
                     childClassName={tw`h-48 rounded`}
                     initialContent={values.configFiles}
@@ -247,7 +247,7 @@ export default function EggSettingsContainer() {
                             <EggDeleteButton eggId={egg.id} onDeleted={() => navigate('/admin/nests')} />
                             <EggExportButton css={tw`ml-auto mr-4`} />
                             <Button type="submit" disabled={isSubmitting || !isValid}>
-                                Save Changes
+                                Сохранить
                             </Button>
                         </div>
                     </div>

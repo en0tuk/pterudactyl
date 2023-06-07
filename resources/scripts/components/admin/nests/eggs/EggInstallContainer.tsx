@@ -58,7 +58,7 @@ export default function EggInstallContainer() {
             }}
         >
             {({ isSubmitting, isValid }) => (
-                <AdminBox icon={faScroll} title={'Install Script'} noPadding>
+                <AdminBox icon={faScroll} title={'Скрипт установки'} noPadding>
                     <div css={tw`relative pb-4`}>
                         <SpinnerOverlay visible={isSubmitting} />
 
@@ -81,18 +81,18 @@ export default function EggInstallContainer() {
                                     <Field
                                         id={'scriptContainer'}
                                         name={'scriptContainer'}
-                                        label={'Install Container'}
+                                        label={'Установка контейнера'}
                                         type={'text'}
-                                        description={'The Docker image to use for running this installation script.'}
+                                        description={'Какой образ контейнера будет использоваться для запуска скрипта.'}
                                     />
 
                                     <Field
                                         id={'scriptEntry'}
                                         name={'scriptEntry'}
-                                        label={'Install Entrypoint'}
+                                        label={'Точка входа'}
                                         type={'text'}
                                         description={
-                                            'The command that should be used to run this script inside of the installation container.'
+                                            'Какая команда будет использоваться для запуска скрипта в установочном контейнере.'
                                         }
                                     />
                                 </div>
@@ -100,7 +100,7 @@ export default function EggInstallContainer() {
 
                             <div css={tw`flex flex-row border-t border-neutral-600`}>
                                 <Button type="submit" css={tw`ml-auto mr-6 mt-4`} disabled={isSubmitting || !isValid}>
-                                    Save Changes
+                                    Сохранить
                                 </Button>
                             </div>
                         </Form>
