@@ -38,9 +38,9 @@ export default () => {
         <AdminContentBlock title={'Overview'}>
             <div css={tw`w-full flex flex-row items-center mb-8`}>
                 <div css={tw`flex flex-col flex-shrink`} style={{ minWidth: '0' }}>
-                    <h2 css={tw`text-2xl text-neutral-50 font-header font-medium`}>Overview</h2>
+                    <h2 css={tw`text-2xl text-neutral-50 font-header font-medium`}>Обзор</h2>
                     <p css={tw`text-base text-neutral-400 whitespace-nowrap overflow-ellipsis overflow-hidden`}>
-                        A quick glance at your system.
+                    Быстрый взгляд на вашу систему.
                     </p>
                 </div>
             </div>
@@ -71,26 +71,26 @@ export default () => {
                                         d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"
                                     />
                                 </svg>
-                                System Information
+                                Системная информация
                             </p>
                         </div>
 
                         <div css={tw`px-4 py-4`}>
                             {versionData?.panel.current === 'canary' ? (
                                 <p css={tw`text-neutral-200`}>
-                                    I hope you enjoy living on the edge because you are running a{' '}
-                                    <Code>{versionData?.panel.current}</Code> version of Pterodactyl.
+                                    Я надеюсь тебе нравится жить на краю потому, что у тебя запущена{' '}
+                                    <Code>{versionData?.panel.current}</Code> версия Pterodactyl.
                                 </p>
                             ) : versionData?.panel.latest === versionData?.panel.current ? (
                                 <p css={tw`text-neutral-200`}>
-                                    Your panel is <span css={tw`text-neutral-100`}>up-to-date</span>. The latest version
-                                    is <Code>{versionData?.panel.latest}</Code> and you are running version{' '}
+                                    Твоя панель <span css={tw`text-neutral-100`}>обновлена</span>. Последняя версия
+                                    это <Code>{versionData?.panel.latest}</Code> и у тебя запущена версия{' '}
                                     <Code>{versionData?.panel.current}</Code>.
                                 </p>
                             ) : (
                                 <p css={tw`text-neutral-200`}>
-                                    Your panel is <span css={tw`text-neutral-100`}>not up-to-date</span>. The latest
-                                    version is <Code>{versionData?.panel.latest}</Code> and you are running version{' '}
+                                    Твоя панель <span css={tw`text-neutral-100`}>не обновлена</span>. Последняя
+                                    версия это <Code>{versionData?.panel.latest}</Code> и у тебя запущена версия{' '}
                                     <Code>{versionData?.panel.current}</Code>.
                                 </p>
                             )}
