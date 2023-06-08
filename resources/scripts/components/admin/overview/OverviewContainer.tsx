@@ -35,7 +35,7 @@ export default () => {
     }, []);
 
     return (
-        <AdminContentBlock title={'Overview'}>
+        <AdminContentBlock title={'Обзор'}>
             <div css={tw`w-full flex flex-row items-center mb-8`}>
                 <div css={tw`flex flex-col flex-shrink`} style={{ minWidth: '0' }}>
                     <h2 css={tw`text-2xl text-neutral-50 font-header font-medium`}>Обзор</h2>

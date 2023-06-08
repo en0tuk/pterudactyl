@@ -43,13 +43,13 @@ export default ({ roleId, onDeleted }: Props) => {
         <>
             <ConfirmationModal
                 visible={visible}
-                title={'Delete role?'}
-                buttonText={'Yes, delete role'}
+                title={'Удалить роль?'}
+                buttonText={'Да, удалить роль'}
                 onConfirmed={onDelete}
                 showSpinnerOverlay={loading}
                 onModalDismissed={() => setVisible(false)}
             >
-                Are you sure you want to delete this role?
+                Вы уверены, что хотите удалить эту роль?
             </ConfirmationModal>
 
             <Button type={'button'} size={'xsmall'} color={'red'} onClick={() => setVisible(true)}>

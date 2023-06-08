@@ -17,8 +17,8 @@ interface Values {
 }
 
 const schema = object().shape({
-    name: string().required('A role name must be provided.').max(32, 'Role name must not exceed 32 characters.'),
-    description: string().max(255, 'Role description must not exceed 255 characters.'),
+    name: string().required('Необходимо указать имя роли.').max(32, 'Имя роли не должно превышать 32 символа.'),
+    description: string().max(255, 'Описание роли не должно превышать 255 символ'),
 });
 
 export default () => {
@@ -55,7 +55,7 @@ export default () => {
                         }}
                     >
                         <FlashMessageRender byKey={'role:create'} css={tw`mb-6`} />
-                        <h2 css={tw`mb-6 text-2xl text-neutral-100`}>New Role</h2>
+                        <h2 css={tw`mb-6 text-2xl text-neutral-100`}>Новая роль</h2>
                         <Form css={tw`m-0`}>
                             <Field
                                 type={'text'}
@@ -83,10 +83,10 @@ export default () => {
                                     css={tw`w-full sm:w-auto sm:mr-2`}
                                     onClick={() => setVisible(false)}
                                 >
-                                    Cancel
+                                    Отмена
                                 </Button>
                                 <Button css={tw`w-full mt-4 sm:w-auto sm:mt-0`} type={'submit'}>
-                                    Create Role
+                                    Создать роль
                                 </Button>
                             </div>
                         </Form>
@@ -100,7 +100,7 @@ export default () => {
                 css={tw`h-10 px-4 py-0 whitespace-nowrap`}
                 onClick={() => setVisible(true)}
             >
-                New Role
+                Новая роль
             </Button>
         </>
     );

@@ -77,7 +77,7 @@ const EditInformationContainer = () => {
         >
             {({ isSubmitting, isValid }) => (
                 <>
-                    <AdminBox title={'Edit Role'} css={tw`relative`}>
+                    <AdminBox title={'Изменить роль'} css={tw`relative`}>
                         <SpinnerOverlay visible={isSubmitting} />
 
                         <Form css={tw`mb-0`}>
@@ -96,7 +96,7 @@ const EditInformationContainer = () => {
 
                                 <div css={tw`flex ml-auto`}>
                                     <Button type={'submit'} disabled={isSubmitting || !isValid}>
-                                        Save Changes
+                                    Сохранить изменения
                                     </Button>
                                 </div>
                             </div>
@@ -144,13 +144,13 @@ const RoleEditContainer = () => {
     }
 
     return (
-        <AdminContentBlock title={'Role - ' + role.name}>
+        <AdminContentBlock title={'Роль - ' + role.name}>
             <div css={tw`w-full flex flex-row items-center mb-8`}>
                 <div css={tw`flex flex-col flex-shrink`} style={{ minWidth: '0' }}>
                     <h2 css={tw`text-2xl text-neutral-50 font-header font-medium`}>{role.name}</h2>
                     {(role.description || '').length < 1 ? (
                         <p css={tw`text-base text-neutral-400`}>
-                            <span css={tw`italic`}>No description</span>
+                            <span css={tw`italic`}>Нет описания</span>
                         </p>
                     ) : (
                         <p css={tw`text-base text-neutral-400 whitespace-nowrap overflow-ellipsis overflow-hidden`}>
