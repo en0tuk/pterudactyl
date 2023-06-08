@@ -186,25 +186,25 @@ function ServersTable({ filters }: Props) {
                                                     <span
                                                         css={tw`px-2 inline-flex text-xs leading-5 font-medium rounded-full bg-yellow-200 text-yellow-800`}
                                                     >
-                                                        Installing
+                                                        Устанавливается
                                                     </span>
                                                 ) : server.status === 'transferring' ? (
                                                     <span
                                                         css={tw`px-2 inline-flex text-xs leading-5 font-medium rounded-full bg-yellow-200 text-yellow-800`}
                                                     >
-                                                        Transferring
+                                                        Переноситься
                                                     </span>
                                                 ) : server.status === 'suspended' ? (
                                                     <span
                                                         css={tw`px-2 inline-flex text-xs leading-5 font-medium rounded-full bg-red-200 text-red-800`}
                                                     >
-                                                        Suspended
+                                                        Отключен
                                                     </span>
                                                 ) : (
                                                     <span
                                                         css={tw`px-2 inline-flex text-xs leading-5 font-medium rounded-full bg-green-100 text-green-800`}
                                                     >
-                                                        Active
+                                                        Активен
                                                     </span>
                                                 )}
                                             </td>

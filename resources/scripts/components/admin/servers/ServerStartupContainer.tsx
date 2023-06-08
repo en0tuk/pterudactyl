@@ -44,24 +44,24 @@ function ServerStartupLineContainer({ egg, server }: { egg: Egg | null; server: 
     }, [egg]);
 
     return (
-        <AdminBox title={'Startup Command'} css={tw`relative w-full`}>
+        <AdminBox title={'Команда Запуска'} css={tw`relative w-full`}>
             <SpinnerOverlay visible={isSubmitting} />
 
             <div css={tw`mb-6`}>
                 <Field
                     id={'startup'}
                     name={'startup'}
-                    label={'Startup Command'}
+                    label={'Команда Запуска'}
                     type={'text'}
                     description={
-                        "Edit your server's startup command here. The following variables are available by default: {{SERVER_MEMORY}}, {{SERVER_IP}}, and {{SERVER_PORT}}."
+                        "Отредактируйте команду запуска вашего сервера здесь. Следующие переменные доступны по умолчанию: {{SERVER_MEMORY}}, {{SERVER_IP}}, и {{SERVER_PORT}}."
                     }
                     placeholder={egg?.startup || ''}
                 />
             </div>
 
             <div>
-                <Label>Default Startup Command</Label>
+                <Label>Команда Запуска по Умолчанию</Label>
                 <Input value={egg?.startup || ''} readOnly />
             </div>
         </AdminBox>
@@ -82,7 +82,7 @@ export function ServerServiceContainer({
     const [nestId, setNestId] = useState<number>(_nestId);
 
     return (
-        <AdminBox title={'Service Configuration'} isLoading={isSubmitting} css={tw`w-full`}>
+        <AdminBox title={'Конфигурация Сервиса'} isLoading={isSubmitting} css={tw`w-full`}>
             <div css={tw`mb-6`}>
                 <NestSelector selectedNestId={nestId} onNestSelect={setNestId} />
             </div>
@@ -90,7 +90,7 @@ export function ServerServiceContainer({
                 <EggSelect nestId={nestId} selectedEggId={egg?.id} onEggSelect={setEgg} />
             </div>
             <div css={tw`bg-neutral-800 border border-neutral-900 shadow-inner p-4 rounded`}>
-                <FormikSwitch name={'skipScripts'} label={'Skip Egg Install Script'} description={'Soon™'} />
+                <FormikSwitch name={'skipScripts'} label={'Пропустить Скрипт Установки Яйца'} description={'Скоро™'} />
             </div>
         </AdminBox>
     );
@@ -100,13 +100,13 @@ export function ServerImageContainer() {
     const { isSubmitting } = useFormikContext();
 
     return (
-        <AdminBox title={'Image Configuration'} css={tw`relative w-full`}>
+        <AdminBox title={'Конфигурация Образа'} css={tw`relative w-full`}>
             <SpinnerOverlay visible={isSubmitting} />
 
             <div css={tw`md:w-full md:flex md:flex-col`}>
                 <div>
                     {/* TODO: make this a proper select but allow a custom image to be specified if needed. */}
-                    <Field id={'image'} name={'image'} label={'Docker Image'} type={'text'} />
+                    <Field id={'image'} name={'image'} label={'Образ Docker'} type={'text'} />
                 </div>
             </div>
         </AdminBox>
@@ -196,7 +196,7 @@ function ServerStartupForm({
                 <div css={tw`bg-neutral-700 rounded shadow-md py-2 pr-6 mt-6`}>
                     <div css={tw`flex flex-row`}>
                         <Button type="submit" size="small" css={tw`ml-auto`} disabled={isSubmitting || !isValid}>
-                            Save Changes
+                            Сохранить Изменения
                         </Button>
                     </div>
                 </div>

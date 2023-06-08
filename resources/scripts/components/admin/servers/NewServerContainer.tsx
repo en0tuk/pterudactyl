@@ -71,8 +71,8 @@ function InternalForm() {
                         <div css={tw`xl:col-span-2 bg-neutral-800 border border-neutral-900 shadow-inner p-4 rounded`}>
                             <FormikSwitch
                                 name={'startOnCompletion'}
-                                label={'Start after installation'}
-                                description={'Should the server be automatically started after it has been installed?'}
+                                label={'Запуск после установки'}
+                                description={'Должен ли сервер автоматически запускаться после его установки?'}
                             />
                         </div>
                     </BaseSettingsBox>
@@ -80,10 +80,10 @@ function InternalForm() {
                     <ServerServiceContainer egg={egg} setEgg={setEgg} nestId={0} />
                 </div>
                 <div css={tw`grid grid-cols-1 gap-y-6 col-span-2 md:col-span-1`}>
-                    <AdminBox icon={faNetworkWired} title={'Networking'} isLoading={isSubmitting}>
+                    <AdminBox icon={faNetworkWired} title={'Сеть'} isLoading={isSubmitting}>
                         <div css={tw`grid grid-cols-1 gap-4 lg:gap-6`}>
                             <div>
-                                <Label htmlFor={'allocation.default'}>Primary Allocation</Label>
+                                <Label htmlFor={'allocation.default'}>Основной Адрес</Label>
                                 <Select
                                     id={'allocation.default'}
                                     name={'allocation.default'}
@@ -91,9 +91,9 @@ function InternalForm() {
                                     onChange={e => setFieldValue('allocation.default', Number(e.currentTarget.value))}
                                 >
                                     {node === null ? (
-                                        <option value="">Select a node...</option>
+                                        <option value="">Выберите ноду...</option>
                                     ) : (
-                                        <option value="">Select an allocation...</option>
+                                        <option value="">Выберите адрес...</option>
                                     )}
                                     {allocations?.map(a => (
                                         <option key={a.id} value={a.id.toString()}>
@@ -116,16 +116,16 @@ function InternalForm() {
                     <ServerImageContainer />
                 </div>
 
-                <AdminBox title={'Startup Command'} css={tw`relative w-full col-span-2`}>
+                <AdminBox title={'Команда запуска'} css={tw`relative w-full col-span-2`}>
                     <SpinnerOverlay visible={isSubmitting} />
 
                     <Field
                         id={'startup'}
                         name={'startup'}
-                        label={'Startup Command'}
+                        label={'Команда запуска'}
                         type={'text'}
                         description={
-                            "Edit your server's startup command here. The following variables are available by default: {{SERVER_MEMORY}}, {{SERVER_IP}}, and {{SERVER_PORT}}."
+                            "Отредактируйте команду запуска вашего сервера здесь. Следующие переменные доступны по умолчанию: {{SERVER_MEMORY}}, {{SERVER_IP}}, и {{SERVER_PORT}}."
                         }
                         placeholder={egg?.startup || ''}
                     />
@@ -143,7 +143,7 @@ function InternalForm() {
                 <div css={tw`bg-neutral-700 rounded shadow-md px-4 py-3 col-span-2`}>
                     <div css={tw`flex flex-row`}>
                         <Button type="submit" size="small" css={tw`ml-auto`} disabled={isSubmitting || !isValid}>
-                            Create Server
+                            Создать Сервер
                         </Button>
                     </div>
                 </div>
@@ -167,12 +167,12 @@ export default () => {
     };
 
     return (
-        <AdminContentBlock title={'New Server'}>
+        <AdminContentBlock title={'Новый Сервер'}>
             <div css={tw`w-full flex flex-row items-center mb-8`}>
                 <div css={tw`flex flex-col flex-shrink`} style={{ minWidth: '0' }}>
-                    <h2 css={tw`text-2xl text-neutral-50 font-header font-medium`}>New Server</h2>
+                    <h2 css={tw`text-2xl text-neutral-50 font-header font-medium`}>Новый Сервер</h2>
                     <p css={tw`text-base text-neutral-400 whitespace-nowrap overflow-ellipsis overflow-hidden`}>
-                        Add a new server to the panel.
+                        Добавить новый сервер в панель.
                     </p>
                 </div>
             </div>

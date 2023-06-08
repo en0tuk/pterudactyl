@@ -37,7 +37,7 @@ export default () => {
     }
 
     return (
-        <AdminContentBlock title={'Server - ' + server.name}>
+        <AdminContentBlock title={'Сервер - ' + server.name}>
             <FlashMessageRender byKey={'backups'} css={tw`mb-4`} />
             <div css={tw`w-full flex flex-row items-center mb-4`}>
                 <div css={tw`flex flex-col flex-shrink`} style={{ minWidth: '0' }}>
@@ -51,17 +51,17 @@ export default () => {
             <FlashMessageRender byKey={'server'} css={tw`mb-4`} />
 
             <SubNavigation>
-                <SubNavigationLink to={`/admin/servers/${params.id}`} name={'Settings'} icon={CogIcon} />
-                <SubNavigationLink to={`/admin/servers/${params.id}/startup`} name={'Startup'} icon={AdjustmentsIcon} />
+                <SubNavigationLink to={`/admin/servers/${params.id}`} name={'Настройки'} icon={CogIcon} />
+                <SubNavigationLink to={`/admin/servers/${params.id}/startup`} name={'Запуск'} icon={AdjustmentsIcon} />
                 <SubNavigationLink
                     to={`/admin/servers/${params.id}/databases`}
-                    name={'Databases'}
+                    name={'Базы Данных'}
                     icon={DatabaseIcon}
                 />
                 <SubNavigationLink to={`/admin/servers/${params.id}/mounts`} name={'Mounts'} icon={FolderIcon} />
                 <SubNavigationLink
                     to={`/admin/servers/${params.id}/manage`}
-                    name={'Manage'}
+                    name={'Управлять'}
                     icon={ShieldExclamationIcon}
                 />
             </SubNavigation>

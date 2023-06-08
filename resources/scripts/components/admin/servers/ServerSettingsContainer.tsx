@@ -82,7 +82,7 @@ export default () => {
                                     <ServerDeleteButton />
 
                                     <Button type="submit" className="ml-auto" disabled={isSubmitting || !isValid}>
-                                        Save Changes
+                                        Сохранить Изменения
                                     </Button>
                                 </div>
                             </div>

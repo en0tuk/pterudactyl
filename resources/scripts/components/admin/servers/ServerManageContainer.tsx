@@ -12,7 +12,7 @@ export default () => {
     return (
         <div css={tw`grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-2 gap-y-2`}>
             <div css={tw`h-auto flex flex-col`}>
-                <AdminBox title={'Reinstall Server'} css={tw`relative w-full`}>
+                <AdminBox title={'Переустановить Сервер'} css={tw`relative w-full`}>
                     <div css={tw`flex flex-row text-red-500 justify-start items-center mb-4`}>
                         <div css={tw`w-12 mr-2`}>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -23,35 +23,35 @@ export default () => {
                                 />
                             </svg>
                         </div>
-                        <p css={tw`text-sm`}>Danger! This could overwrite server data.</p>
+                        <p css={tw`text-sm`}>Осторожно! Это может привести к перезаписи данных сервера.</p>
                     </div>
                     <Button size={'large'} color={'red'} css={tw`w-full`}>
-                        Reinstall Server
+                        Переустановить Сервер
                     </Button>
                     <p css={tw`text-xs text-neutral-400 mt-2`}>
-                        This will reinstall the server with the assigned service scripts.
+                    Это приведет к переустановке сервера с назначенным сценарием установки.
                     </p>
                 </AdminBox>
             </div>
             <div css={tw`h-auto flex flex-col`}>
-                <AdminBox title={'Install Status'} css={tw`relative w-full`}>
+                <AdminBox title={'Установка статуса'} css={tw`relative w-full`}>
                     <Button size={'large'} color={'primary'} css={tw`w-full`}>
-                        Set Server as Installing
+                        Установить Статус сервер как Устанавливается
                     </Button>
                     <p css={tw`text-xs text-neutral-400 mt-2`}>
-                        If you need to change the install status from uninstalled to installed, or vice versa, you may
-                        do so with the button below.
+                    Если вам необходимо изменить статус установки с неустановленной на установленную или наоборот,
+                     вы можете сделать это с помощью кнопки ниже.
                     </p>
                 </AdminBox>
             </div>
             <div css={tw`h-auto flex flex-col`}>
-                <AdminBox title={'Suspend Server '} css={tw`relative w-full`}>
+                <AdminBox title={'Приостановить Сервер'} css={tw`relative w-full`}>
                     <Button size={'large'} color={'primary'} css={tw`w-full`}>
-                        Suspend Server
+                        Приостановить Сервер
                     </Button>
                     <p css={tw`text-xs text-neutral-400 mt-2`}>
-                        This will suspend the server, stop any running processes, and immediately block the user from
-                        being able to access their files or otherwise manage the server through the panel or API.
+                        Это приостановит работу сервера, остановит все запущенные процессы и немедленно заблокирует пользователя от
+                        доступа к своим файлам или иного управления сервером через панель или API.
                     </p>
                 </AdminBox>
             </div>

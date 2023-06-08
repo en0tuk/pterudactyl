@@ -61,7 +61,7 @@ export default ({ nestId, selectedEggId, onEggSelect }: Props) => {
             <Label>Egg</Label>
             <Select id={'eggId'} name={'eggId'} defaultValue={selectedEggId} onChange={onSelectChange}>
                 {!eggs ? (
-                    <option disabled>Loading...</option>
+                    <option disabled>Загрузка...</option>
                 ) : (
                     eggs.map(v => (
                         <option key={v.id} value={v.id.toString()}>
