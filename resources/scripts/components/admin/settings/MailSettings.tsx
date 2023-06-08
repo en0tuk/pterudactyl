@@ -22,7 +22,7 @@ export default () => {
                 username: '',
                 password: '',
                 mailFrom: 'no-reply@example.com',
-                mailFromName: 'Pterodactyl Panel',
+                mailFromName: 'Панель Pterodactyl',
             }}
         >
             {({ isSubmitting, isValid }) => (
@@ -33,20 +33,20 @@ export default () => {
                                 id={'smtpHost'}
                                 name={'smtpHost'}
                                 type={'text'}
-                                label={'SMTP Host'}
+                                label={'Хост SMTP'}
                                 description={''}
                             />
                             <Field
                                 id={'smtpPort'}
                                 name={'smtpPort'}
                                 type={'number'}
-                                label={'SMTP Port'}
+                                label={'Порт SMTP'}
                                 description={''}
                             />
                             <div>
                                 <Label>Encryption</Label>
                                 <Select id={'smtpEncryption'} name={'smtpEncryption'} defaultValue={'tls'}>
-                                    <option value="">None</option>
+                                    <option value="">Отсутствует</option>
                                     <option value="ssl">Secure Sockets Layer (SSL)</option>
                                     <option value="tls">Transport Layer Security (TLS)</option>
                                 </Select>
@@ -58,14 +58,14 @@ export default () => {
                                 id={'username'}
                                 name={'username'}
                                 type={'text'}
-                                label={'Username'}
+                                label={'Имя пользователя'}
                                 description={''}
                             />
                             <Field
                                 id={'password'}
                                 name={'password'}
                                 type={'password'}
-                                label={'Password'}
+                                label={'Пароль'}
                                 description={''}
                             />
                         </FieldRow>
@@ -75,14 +75,14 @@ export default () => {
                                 id={'mailFrom'}
                                 name={'mailFrom'}
                                 type={'text'}
-                                label={'Mail From'}
+                                label={'Письмо от'}
                                 description={''}
                             />
                             <Field
                                 id={'mailFromName'}
                                 name={'mailFromName'}
                                 type={'text'}
-                                label={'Mail From Name'}
+                                label={'Отправитель'}
                                 description={''}
                             />
                         </FieldRow>
@@ -91,7 +91,7 @@ export default () => {
                     <div css={tw`bg-neutral-700 rounded shadow-md px-4 xl:px-5 py-4 mt-6`}>
                         <div css={tw`flex flex-row`}>
                             <Button type="submit" size="small" css={tw`ml-auto`} disabled={isSubmitting || !isValid}>
-                                Save Changes
+                                Сохранить Изменения
                             </Button>
                         </div>
                     </div>
