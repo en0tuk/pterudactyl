@@ -14,23 +14,23 @@ export default () => {
                 <Field
                     id={'featureLimits.allocations'}
                     name={'featureLimits.allocations'}
-                    label={'Allocation Limit'}
+                    label={'Лимит Адресов'}
                     type={'number'}
-                    description={'The total number of allocations a user is allowed to create for this server.'}
+                    description={'Общее количество адресов, которое пользователь может создать для этого сервера.'}
                 />
                 <Field
                     id={'featureLimits.backups'}
                     name={'featureLimits.backups'}
-                    label={'Backup Limit'}
+                    label={'Лимит Бэкапов'}
                     type={'number'}
-                    description={'The total number of backups that can be created for this server.'}
+                    description={'Общее количество бэкапов, которые могут быть созданы для этого сервера.'}
                 />
                 <Field
                     id={'featureLimits.databases'}
                     name={'featureLimits.databases'}
-                    label={'Database Limit'}
+                    label={'Лимит Баз Данных'}
                     type={'number'}
-                    description={'The total number of databases a user is allowed to create for this server.'}
+                    description={'Общее количество баз данных, которое пользователь может создать для этого сервера.'}
                 />
             </div>
         </AdminBox>

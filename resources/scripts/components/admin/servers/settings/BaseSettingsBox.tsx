@@ -18,9 +18,9 @@ export default ({ children }: { children?: ReactNode }) => {
                 <Field
                     id={'name'}
                     name={'name'}
-                    label={'Server Name'}
+                    label={'Имя сервера'}
                     type={'text'}
-                    placeholder={'My Amazing Server'}
+                    placeholder={'Мой потрясающий сервер'}
                 />
                 <Field id={'externalId'} name={'externalId'} label={'External Identifier'} type={'text'} />
                 <OwnerSelect selected={server?.relationships.user} />

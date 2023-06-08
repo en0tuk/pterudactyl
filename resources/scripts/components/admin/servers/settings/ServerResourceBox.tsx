@@ -15,55 +15,55 @@ export default () => {
                 <Field
                     id={'limits.cpu'}
                     name={'limits.cpu'}
-                    label={'CPU Limit'}
+                    label={'Лимит CPU'}
                     type={'text'}
                     description={
-                        'Each thread on the system is considered to be 100%. Setting this value to 0 will allow the server to use CPU time without restriction.'
+                        'Каждый поток в системе в системе считается как 100%. Установка этого значения на 0 позволит серверу использовать процессор без ограничений.'
                     }
                 />
                 <Field
                     id={'limits.threads'}
                     name={'limits.threads'}
-                    label={'CPU Pinning'}
+                    label={'Фиксация ядер'}
                     type={'text'}
                     description={
-                        'Advanced: Enter the specific CPU cores that this server can run on, or leave blank to allow all cores. This can be a single number, and or a comma seperated list, and or a dashed range. Example: 0, 0-1,3, or 0,1,3,4.  It is recommended to leave this value blank and let the CPU handle balancing the load.'
+                        'Продвинутый: Введите определенные ядра на которых может работать сервер или оставьте пустым, чтобы разрешить все ядра. Это может быть одно число или список через запятую или пунктирный диапазон. Например: 0, 0-1,3 или 0,1,3,4. Рекомендуется оставить это значение пустым и позволить процессору самостоятельно распределять нагрузку.'
                     }
                 />
                 <Field
                     id={'limits.memory'}
                     name={'limits.memory'}
-                    label={'Memory Limit'}
+                    label={'Лимит ОЗУ'}
                     type={'number'}
                     description={
-                        'The maximum amount of memory allowed for this container. Setting this to 0 will allow unlimited memory in a container.'
+                        'Максимальный объем памяти, установленный дляконтейнера. Установка этого параметра на 0 позволит использовать неограниченный объем ОЗУ в контейнере.'
                     }
                 />
                 <Field id={'limits.swap'} name={'limits.swap'} label={'Swap Limit'} type={'number'} />
                 <Field
                     id={'limits.disk'}
                     name={'limits.disk'}
-                    label={'Disk Limit'}
+                    label={'Размер Диска'}
                     type={'number'}
                     description={
-                        'This server will not be allowed to boot if it is using more than this amount of space. If a server goes over this limit while running it will be safely stopped and locked until enough space is available. Set to 0 to allow unlimited disk usage.'
+                        'Сервер не будет загружен, если он использует больше указанного объема места. Если сервер превысит этот лимит во время работы, он будет безопасно остановлен и заблокирован до тех пор, пока не освободится достаточно места. Установите на 0, чтобы разрешить неограниченное использование диска.'
                     }
                 />
                 <Field
                     id={'limits.io'}
                     name={'limits.io'}
-                    label={'Block IO Proportion'}
+                    label={'Ограничение IO'}
                     type={'number'}
                     description={
-                        'Advanced: The IO performance of this server relative to other running containers on the system. Value should be between 10 and 1000.'
+                        'Продвинутый: Производительность IO этого сервера относительно других запущенных контейнеров в системе. Значение должно находиться в диапазоне от 10 до 1000.'
                     }
                 />
                 <div css={tw`xl:col-span-2 bg-neutral-800 border border-neutral-900 shadow-inner p-4 rounded`}>
                     <FormikSwitch
                         name={'limits.oomKiller'}
-                        label={'Out of Memory Killer'}
+                        label={'OOM Killer'}
                         description={
-                            'Enabling the Out of Memory Killer may cause server processes to exit unexpectedly.'
+                            'Включение Out of Memory Killer может привести к неожиданному завершению процесса сервера.'
                         }
                     />
                 </div>

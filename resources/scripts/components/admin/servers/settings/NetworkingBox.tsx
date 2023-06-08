@@ -45,14 +45,14 @@ export default () => {
                 <AsyncSelectField
                     id={'addAllocations'}
                     name={'addAllocations'}
-                    label={'Add Allocations'}
+                    label={'Добавить Адрес'}
                     loadOptions={loadOptions}
                     isMulti
                 />
                 <SelectField
                     id={'removeAllocations'}
                     name={'removeAllocations'}
-                    label={'Remove Allocations'}
+                    label={'Убрать Адрес'}
                     options={
                         server?.relationships.allocations?.map(a => {
                             return { value: a.id.toString(), label: a.getDisplayText() };
