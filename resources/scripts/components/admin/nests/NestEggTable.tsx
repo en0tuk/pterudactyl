@@ -98,11 +98,11 @@ const EggsTable = () => {
                                     onClick={() => setSort('id')}
                                 />
                                 <TableHeader
-                                    name={'Name'}
+                                    name={'Название'}
                                     direction={sort === 'name' ? (sortDirection ? 1 : 2) : null}
                                     onClick={() => setSort('name')}
                                 />
-                                <TableHeader name={'Description'} />
+                                <TableHeader name={'Описание'} />
                             </TableHead>
 
                             <TableBody>

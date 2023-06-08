@@ -44,13 +44,13 @@ export default ({ nestId, onDeleted }: Props) => {
         <>
             <ConfirmationModal
                 visible={visible}
-                title={'Delete nest?'}
-                buttonText={'Yes, delete nest'}
+                title={'Удалить гнездо?'}
+                buttonText={'Да, удалить'}
                 onConfirmed={onDelete}
                 showSpinnerOverlay={loading}
                 onModalDismissed={() => setVisible(false)}
             >
-                Are you sure you want to delete this nest? Deleting a nest will delete all eggs assigned to it.
+                Вы уверены, что хотите удалить это гнездо? При удалении гнезда все яйца, лежащие в нем, будут удалены.
             </ConfirmationModal>
 
             <Button.Danger type="button" shape={Shape.IconSquare} onClick={() => setVisible(true)}>

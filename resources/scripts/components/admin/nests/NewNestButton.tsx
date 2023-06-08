@@ -19,8 +19,8 @@ interface Values {
 }
 
 const schema = object().shape({
-    name: string().required('A nest name must be provided.').max(32, 'Nest name must not exceed 32 characters.'),
-    description: string().max(255, 'Nest description must not exceed 255 characters.'),
+    name: string().required('Должно быть указано название.').max(32, 'Название не должно превышать 32 символа.'),
+    description: string().max(255, 'Описание гнезда не должно превышать 255 символов.'),
 });
 
 export default () => {
@@ -58,15 +58,15 @@ export default () => {
                     >
                         <FlashMessageRender byKey={'nest:create'} css={tw`mb-6`} />
 
-                        <h2 css={tw`mb-6 text-2xl text-neutral-100`}>New Nest</h2>
+                        <h2 css={tw`mb-6 text-2xl text-neutral-100`}>Новое гнездо</h2>
 
                         <Form css={tw`m-0`}>
                             <Field
                                 type={'text'}
                                 id={'name'}
                                 name={'name'}
-                                label={'Name'}
-                                description={'A short name used to identify this nest.'}
+                                label={'Название'}
+                                description={'Короткое название гнезда.'}
                                 autoFocus
                             />
 
@@ -75,8 +75,8 @@ export default () => {
                                     type={'text'}
                                     id={'description'}
                                     name={'description'}
-                                    label={'Description'}
-                                    description={'A description for this nest.'}
+                                    label={'Описание'}
+                                    description={'Описание гнезда.'}
                                 />
                             </div>
 
@@ -87,11 +87,11 @@ export default () => {
                                     className="w-full sm:mr-2 sm:w-auto"
                                     onClick={() => setVisible(false)}
                                 >
-                                    Cancel
+                                    Отмена
                                 </Button.Text>
 
                                 <Button type="submit" className="mt-4 w-full sm:mt-0 sm:w-auto">
-                                    Create Nest
+                                    Создать гнездо
                                 </Button>
                             </div>
                         </Form>
@@ -105,7 +105,7 @@ export default () => {
                 className="h-10 whitespace-nowrap px-4 py-0"
                 onClick={() => setVisible(true)}
             >
-                New Nest
+                Новое гнездо
             </Button>
         </>
     );
