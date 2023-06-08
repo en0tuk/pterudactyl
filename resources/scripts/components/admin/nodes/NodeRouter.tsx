@@ -66,7 +66,7 @@ const NodeRouter = () => {
     }
 
     return (
-        <AdminContentBlock title={'Node - ' + node.name}>
+        <AdminContentBlock title={'Нода - ' + node.name}>
             <div css={tw`w-full flex flex-row items-center mb-4`}>
                 <div css={tw`flex flex-col flex-shrink`} style={{ minWidth: '0' }}>
                     <h2 css={tw`text-2xl text-neutral-50 font-header font-medium`}>{node.name}</h2>

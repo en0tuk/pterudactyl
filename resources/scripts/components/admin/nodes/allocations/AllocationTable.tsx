@@ -103,17 +103,17 @@ function AllocationsTable({ nodeId, filters }: Props) {
                         <table css={tw`w-full table-auto`}>
                             <TableHead>
                                 <TableHeader
-                                    name={'IP Address'}
+                                    name={'IP Адрес'}
                                     direction={sort === 'ip' ? (sortDirection ? 1 : 2) : null}
                                     onClick={() => setSort('ip')}
                                 />
-                                <TableHeader name={'Alias'} />
+                                <TableHeader name={'Алиас'} />
                                 <TableHeader
-                                    name={'Port'}
+                                    name={'Порт'}
                                     direction={sort === 'port' ? (sortDirection ? 1 : 2) : null}
                                     onClick={() => setSort('port')}
                                 />
-                                <TableHeader name={'Assigned To'} />
+                                <TableHeader name={'Привязан к'} />
                                 <TableHeader />
                             </TableHead>
 

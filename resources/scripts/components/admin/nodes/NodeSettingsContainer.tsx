@@ -18,7 +18,7 @@ export default function NodeSettingsContainer({ node }: { node?: Node }) {
             <SpinnerOverlay visible={isSubmitting} />
 
             <div css={tw`mb-6`}>
-                <Field id={'name'} name={'name'} label={'Name'} type={'text'} />
+                <Field id={'name'} name={'name'} label={'Имя'} type={'text'} />
             </div>
 
             <div css={tw`mb-6`}>
@@ -49,44 +49,44 @@ export default function NodeSettingsContainer({ node }: { node?: Node }) {
                 <div>
                     <label css={tw`inline-flex items-center mr-2`}>
                         <FormikField name={'scheme'} type={'radio'} value={'https'} />
-                        <span css={tw`text-neutral-300 ml-2`}>Enabled</span>
+                        <span css={tw`text-neutral-300 ml-2`}>Включен</span>
                     </label>
 
                     <label css={tw`inline-flex items-center ml-2`}>
                         <FormikField name={'scheme'} type={'radio'} value={'http'} />
-                        <span css={tw`text-neutral-300 ml-2`}>Disabled</span>
+                        <span css={tw`text-neutral-300 ml-2`}>Выключен</span>
                     </label>
                 </div>
             </div>
 
             <div css={tw`mt-6`}>
-                <Label htmlFor={'behindProxy'}>Behind Proxy</Label>
+                <Label htmlFor={'behindProxy'}>За Прокси</Label>
 
                 <div>
                     <label css={tw`inline-flex items-center mr-2`}>
                         <FormikField name={'behindProxy'} type={'radio'} value={'false'} />
-                        <span css={tw`text-neutral-300 ml-2`}>No</span>
+                        <span css={tw`text-neutral-300 ml-2`}>Нет</span>
                     </label>
 
                     <label css={tw`inline-flex items-center ml-2`}>
                         <FormikField name={'behindProxy'} type={'radio'} value={'true'} />
-                        <span css={tw`text-neutral-300 ml-2`}>Yes</span>
+                        <span css={tw`text-neutral-300 ml-2`}>Да</span>
                     </label>
                 </div>
             </div>
 
             <div css={tw`mt-6`}>
-                <Label htmlFor={'public'}>Automatic Allocation</Label>
+                <Label htmlFor={'public'}>Автоматическое назначение адреса</Label>
 
                 <div>
                     <label css={tw`inline-flex items-center mr-2`}>
                         <FormikField name={'public'} type={'radio'} value={'false'} />
-                        <span css={tw`text-neutral-300 ml-2`}>Disabled</span>
+                        <span css={tw`text-neutral-300 ml-2`}>Выключено</span>
                     </label>
 
                     <label css={tw`inline-flex items-center ml-2`}>
                         <FormikField name={'public'} type={'radio'} value={'true'} />
-                        <span css={tw`text-neutral-300 ml-2`}>Enabled</span>
+                        <span css={tw`text-neutral-300 ml-2`}>Включено</span>
                     </label>
                 </div>
             </div>

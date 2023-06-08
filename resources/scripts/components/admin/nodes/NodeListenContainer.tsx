@@ -15,21 +15,21 @@ export default () => {
 
             <div css={tw`mb-6 md:w-full md:flex md:flex-row`}>
                 <div css={tw`mb-6 md:w-full md:flex md:flex-col md:mr-4 md:mb-0`}>
-                    <Field id={'listenPortHTTP'} name={'listenPortHTTP'} label={'HTTP Listen Port'} type={'number'} />
+                    <Field id={'listenPortHTTP'} name={'listenPortHTTP'} label={'Порт прослушивания HTTP'} type={'number'} />
                 </div>
 
                 <div css={tw`mb-6 md:w-full md:flex md:flex-col md:ml-4 md:mb-0`}>
-                    <Field id={'publicPortHTTP'} name={'publicPortHTTP'} label={'HTTP Public Port'} type={'number'} />
+                    <Field id={'publicPortHTTP'} name={'publicPortHTTP'} label={'Публичный порт HTTP'} type={'number'} />
                 </div>
             </div>
 
             <div css={tw`mb-6 md:w-full md:flex md:flex-row`}>
                 <div css={tw`mb-6 md:w-full md:flex md:flex-col md:mr-4 md:mb-0`}>
-                    <Field id={'listenPortSFTP'} name={'listenPortSFTP'} label={'SFTP Listen Port'} type={'number'} />
+                    <Field id={'listenPortSFTP'} name={'listenPortSFTP'} label={'Порт прослушивания SFTP'} type={'number'} />
                 </div>
 
                 <div css={tw`mb-6 md:w-full md:flex md:flex-col md:ml-4 md:mb-0`}>
-                    <Field id={'publicPortSFTP'} name={'publicPortSFTP'} label={'SFTP Public Port'} type={'number'} />
+                    <Field id={'publicPortSFTP'} name={'publicPortSFTP'} label={'Публичный порт SFTP'} type={'number'} />
                 </div>
             </div>
         </AdminBox>

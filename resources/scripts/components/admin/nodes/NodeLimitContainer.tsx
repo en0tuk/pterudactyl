@@ -10,7 +10,7 @@ export default () => {
     const { isSubmitting } = useFormikContext();
 
     return (
-        <AdminBox icon={faMicrochip} title={'Limits'} css={tw`w-full relative`}>
+        <AdminBox icon={faMicrochip} title={'Лимиты'} css={tw`w-full relative`}>
             <SpinnerOverlay visible={isSubmitting} />
 
             <div css={tw`md:w-full md:flex md:flex-row mb-6`}>
@@ -22,7 +22,7 @@ export default () => {
                     <Field
                         id={'memoryOverallocate'}
                         name={'memoryOverallocate'}
-                        label={'Memory Overallocate'}
+                        label={'Переполнение Памяти'}
                         type={'number'}
                     />
                 </div>
@@ -37,7 +37,7 @@ export default () => {
                     <Field
                         id={'diskOverallocate'}
                         name={'diskOverallocate'}
-                        label={'Disk Overallocate'}
+                        label={'Переполнение Диска'}
                         type={'number'}
                     />
                 </div>

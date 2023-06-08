@@ -43,13 +43,13 @@ export default ({ nodeId, onDeleted }: Props) => {
         <>
             <ConfirmationModal
                 visible={visible}
-                title={'Delete node?'}
-                buttonText={'Yes, delete node'}
+                title={'Удалить ноду?'}
+                buttonText={'Да, удалить ноду'}
                 onConfirmed={onDelete}
                 showSpinnerOverlay={loading}
                 onModalDismissed={() => setVisible(false)}
             >
-                Are you sure you want to delete this node?
+                Вы уверены, что хотите удалить эту ноду?
             </ConfirmationModal>
 
             <Button type={'button'} size={'xsmall'} color={'red'} onClick={() => setVisible(true)}>

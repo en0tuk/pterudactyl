@@ -69,8 +69,8 @@ function CreateAllocationForm({ nodeId }: { nodeId: number }) {
                 alias: '',
             }}
             validationSchema={object().shape({
-                ips: array(string()).min(1, 'You must select at least one ip address.'),
-                ports: array(number()).min(1, 'You must select at least one port.'),
+                ips: array(string()).min(1, 'Вы должны выбрать хотя бы один ip-адрес.'),
+                ports: array(number()).min(1, 'Вы должны выбрать хотя бы один порт.'),
             })}
         >
             {({ isSubmitting, isValid }) => (
@@ -78,7 +78,7 @@ function CreateAllocationForm({ nodeId }: { nodeId: number }) {
                     <SelectField
                         id={'ips'}
                         name={'ips'}
-                        label={'IPs and CIDRs'}
+                        label={'IP-адреса и CIDR-адреса'}
                         options={ips}
                         isValidNewOption={isValidIP}
                         isMulti
@@ -90,7 +90,7 @@ function CreateAllocationForm({ nodeId }: { nodeId: number }) {
                     <SelectField
                         id={'ports'}
                         name={'ports'}
-                        label={'Ports'}
+                        label={'Порты'}
                         options={ports}
                         isValidNewOption={isValidPort}
                         isMulti
@@ -99,13 +99,13 @@ function CreateAllocationForm({ nodeId }: { nodeId: number }) {
                     />
 
                     <div css={tw`mt-6`}>
-                        <Field id={'alias'} name={'alias'} label={'Alias'} type={'text'} />
+                        <Field id={'alias'} name={'alias'} label={'Алиас'} type={'text'} />
                     </div>
 
                     <div css={tw`w-full flex flex-row items-center mt-6`}>
                         <div css={tw`flex ml-auto`}>
                             <Button type={'submit'} disabled={isSubmitting || !isValid}>
-                                Create Allocations
+                                Создать Адрес
                             </Button>
                         </div>
                     </div>

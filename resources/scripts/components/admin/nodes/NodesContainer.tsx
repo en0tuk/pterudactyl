@@ -83,19 +83,19 @@ const NodesContainer = () => {
     }, [page]);
 
     return (
-        <AdminContentBlock title={'Nodes'}>
+        <AdminContentBlock title={'Ноды'}>
             <div css={tw`w-full flex flex-row items-center mb-8`}>
                 <div css={tw`flex flex-col flex-shrink`} style={{ minWidth: '0' }}>
-                    <h2 css={tw`text-2xl text-neutral-50 font-header font-medium`}>Nodes</h2>
+                    <h2 css={tw`text-2xl text-neutral-50 font-header font-medium`}>Ноды</h2>
                     <p css={tw`text-base text-neutral-400 whitespace-nowrap overflow-ellipsis overflow-hidden`}>
-                        All nodes available on the system.
+                        Все ноды, доступные в системе.
                     </p>
                 </div>
 
                 <div css={tw`flex ml-auto pl-4`}>
                     <NavLink to={`/admin/nodes/new`}>
                         <Button type={'button'} size={'large'} css={tw`h-10 px-4 py-0 whitespace-nowrap`}>
-                            New Node
+                            Новая Нода
                         </Button>
                     </NavLink>
                 </div>
@@ -119,12 +119,12 @@ const NodesContainer = () => {
                                         onClick={() => setSort('id')}
                                     />
                                     <TableHeader
-                                        name={'Name'}
+                                        name={'Имя'}
                                         direction={sort === 'name' ? (sortDirection ? 1 : 2) : null}
                                         onClick={() => setSort('name')}
                                     />
                                     <TableHeader
-                                        name={'Location'}
+                                        name={'Локация'}
                                         direction={sort === 'location_id' ? (sortDirection ? 1 : 2) : null}
                                         onClick={() => setSort('location_id')}
                                     />
@@ -134,12 +134,12 @@ const NodesContainer = () => {
                                         onClick={() => setSort('fqdn')}
                                     />
                                     <TableHeader
-                                        name={'Total Memory'}
+                                        name={'Объем Памяти'}
                                         direction={sort === 'memory' ? (sortDirection ? 1 : 2) : null}
                                         onClick={() => setSort('memory')}
                                     />
                                     <TableHeader
-                                        name={'Total Disk'}
+                                        name={'Объем Диска'}
                                         direction={sort === 'disk' ? (sortDirection ? 1 : 2) : null}
                                         onClick={() => setSort('disk')}
                                     />
@@ -211,13 +211,13 @@ const NodesContainer = () => {
                                                         <span
                                                             css={tw`px-2 inline-flex text-xs leading-5 font-medium rounded-full bg-green-100 text-green-800`}
                                                         >
-                                                            Secure
+                                                            Защищен
                                                         </span>
                                                     ) : (
                                                         <span
                                                             css={tw`px-2 inline-flex text-xs leading-5 font-medium rounded-full bg-red-200 text-red-800`}
                                                         >
-                                                            Non-Secure
+                                                            Не Защищен
                                                         </span>
                                                     )}
                                                 </td>

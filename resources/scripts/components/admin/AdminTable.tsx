@@ -179,15 +179,15 @@ export function Pagination<T>({ data, onPageSelect, children }: Props<T>) {
 
             <div css={tw`h-12 flex flex-row items-center w-full px-6 py-3 border-t border-neutral-500`}>
                 <p css={tw`text-sm leading-5 text-neutral-400`}>
-                    Showing{' '}
+                    Показываются результаты с{' '}
                     <span css={tw`text-neutral-300`}>
                         {(pagination.currentPage - 1) * pagination.perPage + (pagination.total > 0 ? 1 : 0)}
                     </span>{' '}
-                    to{' '}
+                    до{' '}
                     <span css={tw`text-neutral-300`}>
                         {(pagination.currentPage - 1) * pagination.perPage + pagination.count}
                     </span>{' '}
-                    of <span css={tw`text-neutral-300`}>{pagination.total}</span> results
+                    из <span css={tw`text-neutral-300`}>{pagination.total}</span> результатов
                 </p>
 
                 {isFirstPage && isLastPage ? null : (
@@ -196,7 +196,7 @@ export function Pagination<T>({ data, onPageSelect, children }: Props<T>) {
                             <PaginationArrow
                                 type="button"
                                 css={tw`rounded-l-md`}
-                                aria-label="Previous"
+                                aria-label="Предыдущая"
                                 disabled={pagination.currentPage === 1}
                                 onClick={() => setPage(pagination.currentPage - 1)}
                             >
@@ -228,7 +228,7 @@ export function Pagination<T>({ data, onPageSelect, children }: Props<T>) {
                             <PaginationArrow
                                 type="button"
                                 css={tw`-ml-px rounded-r-md`}
-                                aria-label="Next"
+                                aria-label="Следующая"
                                 disabled={pagination.currentPage === pagination.totalPages}
                                 onClick={() => setPage(pagination.currentPage + 1)}
                             >
@@ -265,11 +265,11 @@ export const NoItems = ({ className }: { className?: string }) => {
     return (
         <div css={tw`w-full flex flex-col items-center justify-center py-6 px-8`} className={className}>
             <div css={tw`h-48 flex`}>
-                <img src={'/assets/svgs/not_found.svg'} alt={'No Items'} css={tw`h-full select-none`} />
+                <img src={'/assets/svgs/not_found.svg'} alt={'Нет предметов'} css={tw`h-full select-none`} />
             </div>
 
             <p css={tw`text-lg text-neutral-300 text-center font-normal sm:mt-8`}>
-                No items could be found, it&apos;s almost like they are hiding.
+                Никаких предметов найти не удалось, такое впечатление, что они прячутся.
             </p>
         </div>
     );
@@ -324,7 +324,7 @@ export const ContentWrapper = ({ checked, onSelectAllClick, onSearch, children }
                         <Input
                             value={inputText}
                             css={tw`h-8`}
-                            placeholder="Search..."
+                            placeholder="Поиск..."
                             onChange={e => {
                                 setInputText(e.currentTarget.value);
                                 search(e.currentTarget.value);

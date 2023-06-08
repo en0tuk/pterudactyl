@@ -65,12 +65,12 @@ export default () => {
     };
 
     return (
-        <AdminContentBlock title={'New Node'}>
+        <AdminContentBlock title={'Новая Нода'}>
             <div css={tw`w-full flex flex-row items-center mb-8`}>
                 <div css={tw`flex flex-col flex-shrink`} style={{ minWidth: '0' }}>
-                    <h2 css={tw`text-2xl text-neutral-50 font-header font-medium`}>New Node</h2>
+                    <h2 css={tw`text-2xl text-neutral-50 font-header font-medium`}>Новая Нода</h2>
                     <p css={tw`text-base text-neutral-400 whitespace-nowrap overflow-ellipsis overflow-hidden`}>
-                        Add a new node to the panel.
+                        Добавит новую ноду в панель
                     </p>
                 </div>
             </div>
@@ -113,7 +113,7 @@ export default () => {
                                 <div css={tw`rounded shadow-md bg-neutral-700 mt-4 py-2 pr-6`}>
                                     <div css={tw`flex flex-row`}>
                                         <Button type={'submit'} css={tw`ml-auto`} disabled={isSubmitting || !isValid}>
-                                            Create
+                                            Создать
                                         </Button>
                                     </div>
                                 </div>

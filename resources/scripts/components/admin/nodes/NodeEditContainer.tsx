@@ -121,7 +121,7 @@ export default () => {
                                 <div css={tw`flex flex-row`}>
                                     <NodeDeleteButton nodeId={node?.id} onDeleted={() => navigate('/admin/nodes')} />
                                     <Button type={'submit'} css={tw`ml-auto`} disabled={isSubmitting || !isValid}>
-                                        Save Changes
+                                        Сохранить Изменения
                                     </Button>
                                 </div>
                             </div>
