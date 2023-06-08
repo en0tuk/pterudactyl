@@ -85,7 +85,7 @@ export default function UserForm({ title, initialValues, children, onSubmit, uui
                                 <Field
                                     id={'externalId'}
                                     name={'externalId'}
-                                    label={'External ID'}
+                                    label={'Внешний ID'}
                                     type={'text'}
                                     description={
                                         'Used by external integrations, this field should not be modified unless you know what you are doing.'
@@ -94,27 +94,27 @@ export default function UserForm({ title, initialValues, children, onSubmit, uui
                                 <Field
                                     id={'username'}
                                     name={'username'}
-                                    label={'Username'}
+                                    label={'Имя пользователя'}
                                     type={'text'}
-                                    description={"The user's username, what else would go here?"}
+                                    description={"Имя пользователя, что еще это может быть?"}
                                 />
                                 <Field
                                     id={'email'}
                                     name={'email'}
-                                    label={'Email Address'}
+                                    label={'Email Адрес'}
                                     type={'email'}
-                                    description={"The user's email address, what else would go here?"}
+                                    description={"Адрес электронной почты пользователя, что еще это может быть?"}
                                 />
                                 <Field
                                     id={'password'}
                                     name={'password'}
-                                    label={'Password'}
+                                    label={'Пароль'}
                                     type={'password'}
                                     placeholder={'••••••••'}
                                     autoComplete={'new-password'}
                                     /* TODO: Change description depending on if user is being created or updated. */
                                     description={
-                                        'Leave empty to email the user a link where they will be required to set a password.'
+                                        'Оставьте пустым, чтобы отправить пользователю по электронной почте ссылку, по которой он должен будет задать пароль.'
                                     }
                                 />
                                 <RoleSelect selected={role} />
@@ -125,8 +125,8 @@ export default function UserForm({ title, initialValues, children, onSubmit, uui
                                 <div css={tw`w-full bg-neutral-800 border border-neutral-900 shadow-inner p-4 rounded`}>
                                     <FormikSwitch
                                         name={'rootAdmin'}
-                                        label={'Root Admin'}
-                                        description={'Should this user be a root administrator?'}
+                                        label={'Root Админ'}
+                                        description={'Должен ли этот пользователь быть администратором root?'}
                                     />
                                 </div>
                             </div>
@@ -135,7 +135,7 @@ export default function UserForm({ title, initialValues, children, onSubmit, uui
                                 {children}
                                 <div css={tw`flex ml-auto`}>
                                     <Button type={'submit'} disabled={isSubmitting || !isValid}>
-                                        Save Changes
+                                        Сохранить Изменения
                                     </Button>
                                 </div>
                             </div>

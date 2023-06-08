@@ -28,7 +28,7 @@ function UsersContainer() {
     );
 
     useEffect(() => {
-        document.title = 'Admin | Users';
+        document.title = 'Админ | Пользователи';
     }, []);
 
     const onRowChange = (user: User, checked: boolean) => {
@@ -46,7 +46,7 @@ function UsersContainer() {
             <div className="mb-4 flex justify-end">
                 <NavLink to="/admin/users/new">
                     <Button className="shadow focus:ring-offset-2 focus:ring-offset-neutral-800">
-                        Add User <PlusIcon className="ml-2 h-5 w-5" />
+                        Добавить Пользователя <PlusIcon className="ml-2 h-5 w-5" />
                     </Button>
                 </NavLink>
             </div>
@@ -64,7 +64,7 @@ function UsersContainer() {
                     <InputField
                         type="text"
                         name="filter"
-                        placeholder="Begin typing to filter..."
+                        placeholder="Начните вводить текст для фильтрации..."
                         className="w-56 focus:w-96"
                         onChange={e => setSearch(e.currentTarget.value)}
                     />

@@ -35,8 +35,8 @@ export default ({ selected }: { selected: UserRole | null }) => {
         <SearchableSelect
             id={'adminRoleId'}
             name={'adminRoleId'}
-            label={'Role'}
-            placeholder={'Select a role...'}
+            label={'Роль'}
+            placeholder={'Выберите роль...'}
             items={roles}
             selected={role}
             setSelected={setRole}

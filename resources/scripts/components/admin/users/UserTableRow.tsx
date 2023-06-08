@@ -18,14 +18,14 @@ function UserTableRow({ user, selected, onRowChange }: Props) {
     return (
         <>
             <Dialog.Confirm
-                title={'Delete account'}
+                title={'Удалить аккаунт'}
                 open={visible}
                 onClose={() => setVisible(false)}
                 onConfirmed={() => {
                     console.log('yeet');
                 }}
             >
-                This account will be permanently deleted.
+                Эта учетная запись будет удалена навсегда.
             </Dialog.Confirm>
 
             <tr>
@@ -37,7 +37,7 @@ function UserTableRow({ user, selected, onRowChange }: Props) {
                 <td className={'whitespace-nowrap py-4 pl-6'}>
                     <div className={'flex items-center'}>
                         <div className={'h-10 w-10'}>
-                            <img src={user.avatarUrl} className={'h-10 w-10 rounded-full'} alt={'User avatar'} />
+                            <img src={user.avatarUrl} className={'h-10 w-10 rounded-full'} alt={'Аватар пользователя'} />
                         </div>
                         <div className={'ml-4'}>
                             <p className={'font-medium'}>{user.email}</p>
@@ -52,7 +52,7 @@ function UserTableRow({ user, selected, onRowChange }: Props) {
                                 'rounded bg-green-100 px-2 py-0.5 text-xs font-semibold uppercase text-green-700'
                             }
                         >
-                            2-FA Enabled
+                            2-FA Включена
                         </span>
                     )}
                 </td>
@@ -62,16 +62,16 @@ function UserTableRow({ user, selected, onRowChange }: Props) {
                             <DotsVerticalIcon />
                         </Dropdown.Button>
                         <Dropdown.Item to={`/admin/users/${user.id}`} icon={<PencilIcon />}>
-                            Edit
+                            Изменить
                         </Dropdown.Item>
-                        <Dropdown.Item icon={<SupportIcon />}>Reset Password</Dropdown.Item>
+                        <Dropdown.Item icon={<SupportIcon />}>Сбросить Пароль</Dropdown.Item>
                         <Dropdown.Item icon={<LockOpenIcon />} disabled={!user.isUsingTwoFactor}>
-                            Disable 2-FA
+                            Отключить 2-FA
                         </Dropdown.Item>
-                        <Dropdown.Item icon={<BanIcon />}>Suspend</Dropdown.Item>
+                        <Dropdown.Item icon={<BanIcon />}>Приостановить</Dropdown.Item>
                         <Dropdown.Gap />
                         <Dropdown.Item icon={<TrashIcon />} onClick={() => setVisible(true)} danger>
-                            Delete Account
+                            Удалить Аккаунт
                         </Dropdown.Item>
                     </Dropdown>
                 </td>

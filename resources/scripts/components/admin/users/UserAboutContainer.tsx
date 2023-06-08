@@ -39,7 +39,7 @@ const UserAboutContainer = () => {
 
     return (
         <UserForm
-            title={'Edit User'}
+            title={'Изменить Пользователя'}
             initialValues={{
                 externalId: user.externalId,
                 username: user.username,
